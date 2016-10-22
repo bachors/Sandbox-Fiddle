@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<!-- Title -->
+		<title>Fiddle - iBacor</title>
+
+		<!-- Asset -->
+		<link type="text/css" rel="stylesheet" href="src/css/bootstrap.css" />
+		<link type="text/css" rel="stylesheet" href="src/css/jquery.enhsplitter.css"/>
+		<link type="text/css" rel="stylesheet" href="src/css/sandbox-fiddle.css" />
+		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.min.css">
+		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/dialog/dialog.min.css">
+		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/theme/monokai.min.css">
+	</head>
+	<body>
+		<div id="page">
+			<header>
+				<a href="#" class="dnl-btn-toggle" title="Menus"><span class="fa fa-bars"></span></a>
+				<a href="http://fiddle.ibacor.com/" class="logo">Fiddle</a>
+				<span class="fa fa-play" id="run" title="Run"></span>
+				<span class="fa fa-floppy-o" title="Save #comingsoon"></span>
+				<span class="pull-right akun">
+                   <a class="btn btn-info" href="#comingsoon"><i class="fa fa-twitter"></i> Login</a>
+				</span>
+			</header>		
+		
+			<div class="menur-navbar-left dnl-visible">			
+				<p class="dnl-nav-title">Title</p>
+				<ul class="dnl-nav">
+					<li>
+						<span>							
+							<input type="text" name="title" title="Title" class="form-control" placeholder="Awesome"/>
+						</span>
+					</li>
+				</ul>			
+				<p class="dnl-nav-title">Language</p>
+				<ul class="dnl-nav">
+					<li>
+						<span>							
+							<select id="lang" class="form-control">
+								<option value="csharp">C Shrap</option>
+								<option value="commonlisp">Common Lisp</option>
+								<option value="d">D</option>
+								<option value="dart">Dart</option>
+								<option value="fortran">Fortran</option>
+								<option value="golang">Golang</option>
+								<option value="groovy">Groovy</option>
+								<option value="html" selected>HTML, JS, CSS</option>
+								<option value="java">Java</option>
+								<option value="lua">Lua</option>
+								<option value="nodejs">Nodejs</option>
+								<option value="objc">Objective-C</option>
+								<option value="pascal">Pascal</option>
+								<option value="perl">Perl</option>
+								<option value="php">PHP</option>
+								<option value="prolog">Prolog</option>
+								<option value="python2">Python 2</option>
+								<option value="python3">Python 3</option>
+								<option value="ruby">Ruby</option>
+								<option value="scala">Scala</option>
+								<option value="sql">SQL</option>
+								<option value="vbn">VB.Net</option>
+							</select>
+						</span>
+					</li>
+				</ul>
+				<p class="dnl-nav-title">Theme</p>
+				<ul class="dnl-nav">
+					<li>
+						<span>
+							<label class="switch">
+								<input type="checkbox" id="theme">
+								<div class="slider round"></div>
+							</label>
+						</span>
+					</li>
+				</ul>		
+				<p class="dnl-nav-title">About</p>
+				<ul class="dnl-nav">
+					<li>
+						<p class="pos">Code sandbox for developers to quickly try out code and share code snippets.</p>
+					</li>
+				</ul>			
+				<footer>Lovingly crafted by<br><a href="https://github.com/bachors" target="_BLANK">bachors</a></footer>
+			</div>
+			<div class="main content-wrap dnl-visible content-opacity" data-effect="dnl-overlay">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12 box">
+								<div id="codingdong">
+									<div class="tempat" id="dua">
+										<div class="tempat_kenca" id="dua_kenca">
+											<div class="kode">
+												<span class="cog" id="coeg"></span>
+												<textarea id="code"></textarea>
+											</div>
+											<div class="kode">
+												<span class="fa fa-spinner fa-spin fa-2x"></span>
+												<span class="cog">RESULT</span>
+												<textarea id="result" spellcheck="false" readonly></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="tempat" id="opat">
+										<div class="tempat_kenca" id="opat_kenca">
+											<div class="kode">
+												<span class="cog"><a href="#openCDN">HTML <i class="fa fa-cog"></i></a></span>
+												<textarea id="html"></textarea>
+											</div>
+											<div class="kode">
+												<span class="cog"><a href="#openCDN">JAVASCRIPT <i class="fa fa-cog"></i></a></span>
+												<textarea id="js"></textarea>
+											</div>
+										</div>
+										<div class="tempat_katuhu" id="opat_katuhu">
+											<div class="kode">
+												<span class="cog"><a href="#openCDN">CSS <i class="fa fa-cog"></i></a></span>
+												<textarea id="css"></textarea>
+											</div>
+											<div class="kode">
+												<span class="fa fa-spinner fa-spin fa-2x"></span>
+												<span class="cog">RESULT</span>
+												<iframe id="result2"></iframe>
+											</div>
+										</div>
+									</div>
+									<div id="openCDN" class="modalDialog">
+										<div>
+											<h4>Add External CSS Or JavaScript</h4>
+											<div id="cdn">
+												<input name="cdn_url[]" value="" type="text" class="cdn-input" placeholder="css or js"><span title="add" id="add">+</span>
+											</div>
+											<a href="#close" title="Save & Close" class="close">Save & Close</a>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="src/js/jquery-2.1.1.min.js"></script>
+			<script src="src/js/jquery.enhsplitter.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/xml/xml.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/javascript/javascript.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/css/css.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/clike/clike.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/php/php.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/go/go.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/vb/vb.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/lua/lua.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/fortran/fortran.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/commonlisp/commonlisp.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/perl/perl.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/pascal/pascal.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/python/python.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/ruby/ruby.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/sql/sql.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/htmlmixed/htmlmixed.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/dialog/dialog.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/search/searchcursor.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/search/search.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/display/placeholder.js"></script>
+			<script src="src/js/sandbox-fiddle.js"></script>
+		</div>
+	</body>
+</html>
