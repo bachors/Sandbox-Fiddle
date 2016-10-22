@@ -1,7 +1,7 @@
 # Code-Sandbox-Fiddle-Theme
 Theme code sandbox for developers to quickly try out code and share code snippets.
 
-Awesome theme & responsive design.
+Awesome theme light & dark mode + responsive design.
 
 Inspired by jsfiddle.
 
