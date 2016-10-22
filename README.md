@@ -1,6 +1,10 @@
 # Code-Sandbox-Fiddle-Theme
 Theme code sandbox for developers to quickly try out code and share code snippets.
 
+Awesome theme & responsive design.
+
+Inspired by jsfiddle.
+
 Built with:
 - Codemirror
 - Bootstrap
