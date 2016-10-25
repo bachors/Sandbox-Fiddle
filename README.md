@@ -3,7 +3,7 @@ Theme HTML, CSS & JS sandbox for developers to quickly try out code and share co
 
 Awesome theme light & dark mode + responsive design.
 
-Inspired by jsfiddle.
+Inspired by jsfiddle & codepen.
 
 Built with:
 - Codemirror
