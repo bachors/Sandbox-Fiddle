@@ -164,8 +164,7 @@ input:checked + .slider:before {
 }
 
 #codingdong .CodeMirror,
-#codingdong #result,
-#codingdong #result2 {
+#codingdong #result {
 	width: 100%;
 	border: none;
 	height: 100%;
@@ -179,13 +178,7 @@ input:checked + .slider:before {
 	background: #f5f5f5
 }
 
-#codingdong #result2 {
-	background: #fff
-}
-
-#codingdong #result,
-#codingdong #result2 {
-	padding: 10px;
+#codingdong #result {
 	resize: none;
 }
 
@@ -320,8 +313,7 @@ input:checked + .slider:before {
   transition: left 300ms;
   border-right: 1px solid #ddd
 }
-.menur-navbar-left input,
-.menur-navbar-left select {
+.menur-navbar-left input {
   width: 95%;
   margin: 5px;
   background: #f5f5f5
