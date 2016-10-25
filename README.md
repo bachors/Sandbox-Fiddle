@@ -13,4 +13,4 @@ Built with:
 - jQuery.enhsplitter
 - Google font-family
 
-<a href="http://fiddle.ibacor.com"><h2>DEMO</h2></a>
+<a href="http://ibacor.com/demo/code-sandbox-fiddle"><h2>DEMO</h2></a>
