@@ -1,5 +1,5 @@
 # Code-Sandbox-Fiddle-Theme
-Theme code sandbox for developers to quickly try out code and share code snippets.
+Theme HTML, CSS & JS sandbox for developers to quickly try out code and share code snippets.
 
 Awesome theme light & dark mode + responsive design.
 
