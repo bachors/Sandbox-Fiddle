@@ -1,6 +1,6 @@
 /*
 * Lovingly crafted by Bachors.com 2016
-* https://github.com/bachors/Code-Sandbox-Fiddle-Theme
+* https://github.com/bachors/Sandbox-Fiddle/
 * Updates will be posted to this site.
 */
 
