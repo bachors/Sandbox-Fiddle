@@ -59,7 +59,6 @@
   cursor: inherit;
 }
 .splitter_bar {
-  background-color: #ddd;
   position: absolute;
   padding: 0 !important;
   box-sizing: border-box;
