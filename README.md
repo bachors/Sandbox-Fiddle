@@ -56,4 +56,4 @@ sandboxFiddle(data, function(save) {
     console.log(save);
 });</pre>
 
-<a href="https://bachors.github.io/Code-Sandbox-Fiddle-Theme/"><h2>DEMO</h2></a>
+<a href="https://bachors.github.io/Sandbox-Fiddle/"><h2>DEMO</h2></a>
