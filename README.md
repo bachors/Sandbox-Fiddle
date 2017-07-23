@@ -23,4 +23,4 @@
 	<li>Google font-family</li>
 </ul>
 
-<a href="http://ibacor.com/demo/code-sandbox-fiddle"><h2>DEMO</h2></a>
+<a href="https://bachors.github.io/Code-Sandbox-Fiddle-Theme/"><h2>DEMO</h2></a>
