@@ -9,25 +9,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		
 		<!-- Title -->
-		<title>Fiddle - iBacor</title>
+		<title>Code Sandbox Fiddle</title>
 
 		<!-- Asset -->
 		<link type="text/css" rel="stylesheet" href="src/css/bootstrap.css" />
 		<link type="text/css" rel="stylesheet" href="src/css/jquery.enhsplitter.css"/>
 		<link type="text/css" rel="stylesheet" href="src/css/sandbox-fiddle.css" />
-		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.min.css">
-		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/dialog/dialog.min.css">
-		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/theme/monokai.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/codemirror.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/dialog/dialog.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/theme/material.min.css">
 	</head>
 	<body>
-		<div id="page">
+		<div id="sandboxFiddle">
 			<header>
 				<a href="#" class="dnl-btn-toggle" title="Menus"><span class="fa fa-bars"></span></a>
-				<a href="http://fiddle.ibacor.com/" class="logo">Fiddle</a>
+				<a href="" class="logo">Fiddle</a>
 				<span class="fa fa-play" id="run" title="Run"></span>
-				<span class="fa fa-floppy-o" title="Save #comingsoon"></span>
-				<span class="pull-right akun">
-                   <a class="btn btn-info" href="#comingsoon"><i class="fa fa-twitter"></i> Login</a>
+				<span class="fa fa-floppy-o" id="save" title="Save"></span>
+				<span class="pull-right">
+                   <a class="btn btn-info" href="https://github.com/bachors/Visitor-Parser-JS"><i class="fa fa-github"></i> Fork me</a>
 				</span>
 			</header>		
 		
@@ -36,7 +36,7 @@
 				<ul class="dnl-nav">
 					<li>
 						<span>							
-							<input type="text" name="title" title="Title" class="form-control" placeholder="Awesome"/>
+							<input type="text" id="title" title="Title" class="form-control" placeholder="Awesome"/>
 						</span>
 					</li>
 				</ul>
@@ -57,13 +57,13 @@
 						<p class="pos">HTML, CSS & JS sandbox for developers to quickly try out code and share code snippets.</p>
 					</li>
 				</ul>			
-				<footer>Lovingly crafted by<br><a href="https://github.com/bachors" target="_BLANK">bachors</a></footer>
+				<footer>Lovingly crafted by<br><a href="https://github.com/bachors/Code-Sandbox-Fiddle-Theme" target="_BLANK">@bachors</a></footer>
 			</div>
 			<div class="main content-wrap dnl-visible content-opacity" data-effect="dnl-overlay">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12 box">
-								<div id="codingdong">
+								<div id="editor">
 									<div class="tempat" id="opat">
 										<div class="tempat_kenca" id="opat_kenca">
 											<div class="kode">
@@ -103,28 +103,48 @@
 			</div>
 			<script src="src/js/jquery-2.1.1.min.js"></script>
 			<script src="src/js/jquery.enhsplitter.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/xml/xml.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/javascript/javascript.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/css/css.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/clike/clike.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/php/php.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/go/go.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/vb/vb.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/lua/lua.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/fortran/fortran.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/commonlisp/commonlisp.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/perl/perl.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/pascal/pascal.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/python/python.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/ruby/ruby.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/sql/sql.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/mode/htmlmixed/htmlmixed.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/dialog/dialog.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/search/searchcursor.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/search/search.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/addon/display/placeholder.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/codemirror.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/mode/xml/xml.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/mode/javascript/javascript.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/mode/css/css.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/mode/htmlmixed/htmlmixed.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/dialog/dialog.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/search/searchcursor.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/search/search.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/display/placeholder.js"></script>
 			<script src="src/js/sandbox-fiddle.js"></script>
+			<script>
+			/* sample
+			sandboxFiddle(function(save) {
+				console.log(save);
+				
+				var cdnJs = save.cdn.js; //array
+				var html = save.html; //string
+				// etc...
+			});
+			*/			
+			
+			// options			
+			var data = {
+				title: 'Demo',
+				theme: 'material', // default or material
+				cdn: {
+					css: [
+						'//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', // external url
+						'//fonts.googleapis.com/css?family=Roboto:300,400,500,700'
+					],
+					js: [
+						'//code.jquery.com/jquery-2.1.1.min.js'
+					]
+				},
+				css: 'body {\n  font-family: "Roboto", "Helvetica", "Arial", sans-serif;\n  background: #222;\n  color: #fff\n}', // css code
+				html: '<h1>Hello, World! <i class="fa fa-smile-o"></i></h1>\n<button id="tes">Click me..</button>', // html code
+				js: '$(document).ready(function(){\n  $("#tes").click(function(){\n    alert("hiiii... :)");\n  });\n});' // javascript code
+			};			
+			sandboxFiddle(data, function(save) {
+				alert(JSON.stringify(save, null, 2));
+			});
+			</script>
 		</div>
 	</body>
 </html>
