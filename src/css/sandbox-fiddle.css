@@ -1,19 +1,16 @@
 /*
-
-Lovingly crafted by iBacor.com 2016
-
+* Lovingly crafted by Bachors.com 2016
+* https://github.com/bachors/Sandbox-Fiddle/
+* Updates will be posted to this site.
 */
 
 @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
-@import url(//fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900);
+@import url(//fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
 body {
-	font-family: Roboto;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-weight: 300;
 	color: #333;
-}
-
-.main .box {
-	padding: 0px
 }
 
 a, a:hover, a:active, a:focus {
@@ -21,7 +18,11 @@ a, a:hover, a:active, a:focus {
    text-decoration: none
 }
 
-header {
+#sandboxFiddle .main .box {
+	padding: 0px
+}
+
+#sandboxFiddle header {
 	padding: 10px;
 	background: #fff;
 	height: 55px;
@@ -32,57 +33,47 @@ header {
 	
 }
 
-header .fa-bars,
-header .fa-times,
-header .fa-play,
-header .fa-floppy-o {
+#sandboxFiddle header .fa-bars,
+#sandboxFiddle header .fa-times,
+#sandboxFiddle header .fa-play,
+#sandboxFiddle header .fa-floppy-o {
     font-size: 2em;
 	cursor: pointer
 }
 
-header .fa-bars,
-header .fa-times {
+#sandboxFiddle header .fa-bars,
+#sandboxFiddle header .fa-times {
 	display: none;
 	color: #ddd;
 }
 
-header .fa-play  {
+#sandboxFiddle header .fa-play  {
     color: #6DD9A3;
 	margin-right: 30px
 }
 
-header .fa-floppy-o  {
+#sandboxFiddle header .fa-floppy-o  {
     color: #FF99CC;
 }
 
-header .fa-play:hover,
-header .fa-floppy-o:hover {
+#sandboxFiddle header .fa-play:hover,
+#sandboxFiddle header .fa-floppy-o:hover {
 	opacity: 0.5;
 }
 
-header a.logo {
+#sandboxFiddle header a.logo {
 	color: #333;
 	font-size: 2em;
 	margin-right: 30px
 }
 
-header .akun a.btn {
-	background: #75BAFF !important;
-	border-color: #588BBF !important;
-}
-
-header .akun img {
-	width: 40px;
-	border-radius: 50%
-}
-
-.main {
+#sandboxFiddle .main {
 	position: absolute;
 	top: 55px
 }
 
  /* The switch - the box around the slider */
-.switch {
+#sandboxFiddle .switch {
   position: relative;
   display: inline-block;
   width: 50px;
@@ -91,10 +82,10 @@ header .akun img {
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+#sandboxFiddle .switch input {display:none;}
 
 /* The slider */
-.slider {
+#sandboxFiddle .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -106,7 +97,7 @@ header .akun img {
   transition: .4s;
 }
 
-.slider:before {
+#sandboxFiddle .slider:before {
   position: absolute;
   content: "";
   height: 16px;
@@ -118,37 +109,37 @@ header .akun img {
   transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #333;
+#sandboxFiddle input:checked + .slider {
+  background-color: #263238;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #333;
+#sandboxFiddle input:focus + .slider {
+  box-shadow: 0 0 1px #263238;
 }
 
-input:checked + .slider:before {
+#sandboxFiddle input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
 /* Rounded sliders */
-.slider.round {
+#sandboxFiddle .slider.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+#sandboxFiddle .slider.round:before {
   border-radius: 50%;
 }
 
-/* codingdong */
-#codingdong {
+/* editor */
+#sandboxFiddle #editor {
 	display:block;
 	margin: 0px;
 	padding: 0px;
 }
 
-#codingdong .tempat {
+#sandboxFiddle #editor .tempat {
 	background-color: #e7e3ff;
 	width: calc(100% - 200px);
 	margin: 0px;
@@ -159,12 +150,12 @@ input:checked + .slider:before {
 	bottom: 0;
 }
 
-#codingdong .splitter_container > .splitter_panel > :not(.splitter_container) {
+#sandboxFiddle #editor .splitter_container > .splitter_panel > :not(.splitter_container) {
 	overflow: hidden;
 }
 
-#codingdong .CodeMirror,
-#codingdong #result {
+#sandboxFiddle #editor .CodeMirror,
+#sandboxFiddle #editor #result {
 	width: 100%;
 	border: none;
 	height: 100%;
@@ -173,16 +164,16 @@ input:checked + .slider:before {
 	letter-spacing: 1px
 }
 
-#codingdong .CodeMirror,
-#codingdong #result {
+#sandboxFiddle #editor .CodeMirror,
+#sandboxFiddle #editor #result {
 	background: #f5f5f5
 }
 
-#codingdong #result {
+#sandboxFiddle #editor #result {
 	resize: none;
 }
 
-#codingdong a.opencdn {
+#sandboxFiddle #editor a.opencdn {
 	background: #101010;
 	font-weight: bold;
 	font-size: 1.4em;
@@ -191,7 +182,7 @@ input:checked + .slider:before {
 	border-radius: 3px;
 }
 
-#codingdong .kode span.fa-spinner {
+#sandboxFiddle #editor .kode span.fa-spinner {
 	position: absolute;
 	top: 5px;
 	left: 5px;
@@ -200,7 +191,7 @@ input:checked + .slider:before {
 	display: none
 }
 
-#codingdong .kode span.cog {
+#sandboxFiddle #editor .kode span.cog {
 	position: absolute;
 	top: 5px;
 	right: 5px;
@@ -209,7 +200,7 @@ input:checked + .slider:before {
 	text-transform: uppercase;
 }
 
-#codingdong .kode span.cog a {
+#sandboxFiddle #editor .kode span.cog a {
 	text-align: center;
 	font-size: 11px;
 	border-radius: 20px;
@@ -218,13 +209,13 @@ input:checked + .slider:before {
 	padding: 0 7px;
 }
 
-#codingdong .kode span.cog a:hover {
+#sandboxFiddle #editor .kode span.cog a:hover {
 	border: 1px solid #1C90F3;
 	color: #1C90F3;
 	text-decoration: none;
 }
 
-#codingdong span#add , span#remove {
+#sandboxFiddle #editor span#add , span#remove {
 	font-weight: bold;
 	font-size: 2em;
 	color: #bbb;
@@ -233,7 +224,7 @@ input:checked + .slider:before {
 	cursor: pointer;
 }
 
-#codingdong .modalDialog {
+#sandboxFiddle #editor .modalDialog {
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
 	top: 0;
@@ -249,7 +240,7 @@ input:checked + .slider:before {
 	pointer-events: none;
 }
 
-#codingdong input.cdn-input {
+#sandboxFiddle #editor input.cdn-input {
 	display: inline-block;
 	width: 80%;
 	color: #222;
@@ -258,12 +249,12 @@ input:checked + .slider:before {
 	padding: 5px;
 }
 
-#codingdong .modalDialog:target {
+#sandboxFiddle #editor .modalDialog:target {
 	opacity: 1;
 	pointer-events: auto;
 }
 
-#codingdong .modalDialog > div {
+#sandboxFiddle #editor .modalDialog > div {
 	width: auto;
 	max-width: 400px;
 	min-width: 250px;
@@ -274,11 +265,11 @@ input:checked + .slider:before {
 	text-align: center;
 }
 
-#codingdong #cdn {
+#sandboxFiddle #editor #cdn {
 	margin-bottom: 50px;
 }
 
-#codingdong .close {
+#sandboxFiddle #editor .close {
     background: #339452;
     color: #fff;
     line-height: 25px;
@@ -294,12 +285,12 @@ input:checked + .slider:before {
 	width: 100%
 }
 
-#codingdong .close:hover {
+#sandboxFiddle #editor .close:hover {
 	opacity: 0.5;
 }
 
 /* menur */
-.menur-navbar-left {
+#sandboxFiddle .menur-navbar-left {
   position: fixed;
   background-color: #fff;
   width: 200px;
@@ -313,103 +304,102 @@ input:checked + .slider:before {
   transition: left 300ms;
   border-right: 1px solid #ddd
 }
-.menur-navbar-left input {
+#sandboxFiddle .menur-navbar-left input {
   width: 95%;
   margin: 5px;
   background: #f5f5f5
 }
-.menur-navbar-left.dnl-hidden {
+#sandboxFiddle .menur-navbar-left.dnl-hidden {
   left: -200px;
 }
-.menur-navbar-left.dnl-hidden.dnl-show {
+#sandboxFiddle .menur-navbar-left.dnl-hidden.dnl-show {
   left: 0;
 }
-.menur-navbar-left .dnl-nav-title {
+#sandboxFiddle .menur-navbar-left .dnl-nav-title {
 	letter-spacing: 1px;
   padding: 10px 5px 0px 5px;
-  font-weight: bold
 }
-.menur-navbar-left .pos {
+#sandboxFiddle .menur-navbar-left .pos {
 	padding: 0px 5px 0px 5px;
 	color: #aaa
 }
-.menur-navbar-left footer {
+#sandboxFiddle .menur-navbar-left footer {
   text-align: center;
 	position: absolute;
 	bottom: 10px;
 	width: 170px;
 	font-size: 12px
 }
-.menur-navbar-left .hr {
+#sandboxFiddle .menur-navbar-left .hr {
   border-bottom: 1px solid #ddd;
   padding: 5px;
 }
-.menur-navbar-left .dnl-nav {
+#sandboxFiddle .menur-navbar-left .dnl-nav {
   padding-left: 0;
   list-style: none;
 }
-.menur-navbar-left .dnl-nav ul {
+#sandboxFiddle .menur-navbar-left .dnl-nav ul {
   padding-left: 0;
   list-style: none;
 }
-.menur-navbar-left .dnl-nav li {
+#sandboxFiddle .menur-navbar-left .dnl-nav li {
   position: relative;
 }
 
 /* Content wrap
 / -------------------------------------------------- */
-.content-wrap {
+#sandboxFiddle .content-wrap {
   position: relative;
 }
-.content-wrap.dnl-visible {
+#sandboxFiddle .content-wrap.dnl-visible {
   margin-left: 200px;
 }
-.content-wrap.dnl-hidden {
+#sandboxFiddle .content-wrap.dnl-hidden {
   margin-left: 0;
   -webkit-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms;
 }
-.content-wrap.dnl-hidden.dnl-push {
+#sandboxFiddle .content-wrap.dnl-hidden.dnl-push {
   margin-left: 200px;
 }
-.content-wrap.content-opacity.dnl-overlay,
-.content-wrap.content-opacity.dnl-push {
+#sandboxFiddle .content-wrap.content-opacity.dnl-overlay,
+#sandboxFiddle .content-wrap.content-opacity.dnl-push {
   opacity: 0.3;
   filter: alpha(opacity=30);
 }
 
 @media (max-width: 767px) {
-	header .fa-bars,
-	header .fa-times {
+	#sandboxFiddle header .fa-bars,
+	#sandboxFiddle header .fa-times {
 		display: inline
 	}
-	.menur-navbar-left.dnl-visible {
+	#sandboxFiddle .menur-navbar-left.dnl-visible {
 		left: -200px;
 	}
-	.menur-navbar-left.dnl-visible.dnl-show {
+	#sandboxFiddle .menur-navbar-left.dnl-visible.dnl-show {
 		left: 0;
 	}
-	.content-wrap.dnl-visible {
+	#sandboxFiddle .content-wrap.dnl-visible {
 		margin-left: 0;
 		-webkit-transition: all 300ms;
 		-o-transition: all 300ms;
 		transition: all 300ms;
 	}
-	.content-wrap.dnl-visible.dnl-push {
+	#sandboxFiddle .content-wrap.dnl-visible.dnl-push {
 		-webkit-transform: translate(200px, 0);
 		-ms-transform: translate(200px, 0);
 		-o-transform: translate(200px, 0);
 		transform: translate(200px, 0);
 	}
-	.content-wrap.dnl-hidden.dnl-push {
+	#sandboxFiddle .content-wrap.dnl-hidden.dnl-push {
 		margin-left: 0;
 		-webkit-transform: translate(200px, 0);
 		-ms-transform: translate(200px, 0);
 		-o-transform: translate(200px, 0);
 		transform: translate(200px, 0);
 	}
-	#codingdong .tempat {
+	#sandboxFiddle #editor .tempat {
 		width: 100%;
 	}
 }
